@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Font awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./css/myStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload = "loadFromLS()" style = "background-image: url(./media/tile.jpg);">
+   
+    <div class="container">
+        <div class="row justify-content-center"><h1 class = "text-center form-heading">My task board</h1></div>
+        <div class="row align-items-center" height="40%">
+            <div class="col" >
+                <iframe src = "./form.html" style = "border: none;" width="100%" id = "formFrame" height="550rem"></iframe>
+            </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <button style = "width: 10em;" class="btn btn-primary btn-lg" onclick = "displayAlltasks('active')">Active tasks</button>
+                </li>
+                <li class="nav-item">
+                <button style = "width: 10em;" class="btn btn-success btn-lg" onclick = "displayAlltasks('done')">Done tasks</button>
+                </li>
+                <li class="nav-item">
+                <button style = "width: 10em;" class="btn btn-danger btn-lg" onclick = "showOverDue()">Overdue tasks</button>
+                </li>
+                <li class="nav-item">
+                <button style = "width: 10em;" class="btn btn-warning btn-lg" onclick = "displayAlltasks('trash')">Trash</button>
+                </li>
+            </ul>
+        </div>
+        <div id = "notesHeading" style = "text-align: center;"></div>
+        <div class="row justify-content-start" id = "notes"></div>
+    </div>
+    
+    <script src = "/js/main.js" ></script>
+</body>
+</html>

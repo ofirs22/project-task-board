@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/myStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body style = "background-image: url(./media/formbg.jpg);background-repeat:repeat-y;background-size: contain; opacity:0.9">
+    <div class = "container">
+        <form onsubmit="parent.createTask(inputTitle.value,inputDue.value,inputCreated.value,selectPriority.value,tAreaFreeText.value)">
+        <div class="row align-items-center" style = "margin-top: 5%; margin-bottom: 5%;">
+            <div class="col">
+                <div class="input-group input-group mb-3">
+                    <label for="inputTitle" class = "form-labels"><h3>Task title: </h3></label>
+                    <input id = "inputTitle" type="text" class="form-control" 
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group input-group mb-3">
+                    <label for="inputDue" class = "form-labels"><h3>Due date:</h3></label>
+                    <input id = "inputDue" type="datetime-local" class="form-control" 
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" style = "margin-top: 5%; margin-bottom: 5%;">
+            <div class="col">
+                <div class="input-group input-group mb-3-lg">
+                    <label for="inputCreated" class = "formLabels"><h3>Created by : </h3></label><br>
+                    <input id = "inputCreated" type="text" class="form-control" 
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group input-group mb-3-lg">
+                    <label for="selectPriority" class = "formLabels"><h3>priority: </h3></label><br>
+                    <select class="custom-select" id="selectPriority">
+                        <option selected value="1">low</option>
+                        <option value="2">Medium</option>
+                        <option value="3">High</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" style = "margin-top: 5%; margin-bottom: 5%;">
+            <div class="col">
+                <div class="input-group input-group mb-3-lg">
+                    <label for="tAreaFreeText" class = "formLabels"><h3>additional Info: </h3></label>
+                    <textarea id = "tAreaFreeText" type="text" class="form-control" 
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <input type="submit" class = "btn btn-success btn-lg" value = "Add task"></button>
+            <button type="reset" class = "btn btn-primary btn-lg">Reset fields</button>
+        </div>
+    </form>
+    </div>
+    <script src = "js/main.js"></script>
+</body>
+</html>
