@@ -11,6 +11,7 @@
     width: 20rem;
     background-image: url("../media/notebg-removebg-preview.png");
     background-size:cover;
+    margin: 0px;
     padding-top:50px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -25,6 +26,7 @@
 }
  .remove-task{
     visibility: hidden;
+    position: absolute;
 } 
 
 .remove-task:hover{
@@ -37,8 +39,8 @@
 
 
 .inner-note{
-    overflow-x: auto;
     overflow-y: auto;
+    height: 500px;
 }
 
 @-webkit-keyframes fadeIn {
