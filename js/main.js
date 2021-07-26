@@ -56,6 +56,11 @@ class Tasks {
         this.getNoteButtons();
         displayAlltasks('active');
     }
+    restoreTask(){
+        this.status = 'active';
+        this.getNoteButtons();
+        displayAlltasks('active')
+    }
 
     changeTaskStatus(status){
         this.status = status;
@@ -74,7 +79,7 @@ class Tasks {
                 style = "font-family:Cambria, Cochin, Georgia, Times, sTimes New Roman, serif;">Mark as done</button>`;
                 break;
             case 'trash':
-                this.noteButtons = `<button onclick = "tasksArray[${i}].changeTaskStatus('active')" class = "btn btn-success btn-sm" 
+                this.noteButtons = `<button onclick = "tasksArray[${i}].restoreTask()" class = "btn btn-success btn-sm" 
                 style = "margin-right: 10px;font-family:Cambria, Cochin, Georgia, Times, Times New Roman">Restore task</button>
                 <button onclick = tasksArray[${i}].eraseFromArray(${this.id}) style = "font-family:Cambria, Cochin, Georgia,s Times, 'Times New Roman', serif;"
                 class = "btn btn-danger btn-sm">remove permanentely</button>`;
@@ -155,7 +160,7 @@ class Tasks {
     addToTrash(){
         this.status = 'trash';
         this.getNoteButtons();
-
+        
     }
 
     removeTask(taskId){
